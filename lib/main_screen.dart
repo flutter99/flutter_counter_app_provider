@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_counter_app_provider/providers/counter_provider.dart';
 import 'package:provider/provider.dart';
+
+import 'providers/counter_provider.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -46,7 +47,7 @@ class _MainScreenState extends State<MainScreen> {
                 ),
               );
             }),
-            SizedBox(height: 60.0),
+            const SizedBox(height: 60.0),
             Consumer<CounterProvider>(builder: (context, value, child){
               return Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
